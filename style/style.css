@@ -22,6 +22,6 @@ main {
     align-items: center;
     justify-content: space-between;
     height: 100%;
-    padding-bottom: 20px; /* Altta bir boşluk bırakmak için */
+    padding-bottom: 20px;
 }
 
