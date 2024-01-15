@@ -1,0 +1,21 @@
+#results {
+    font-size: 40px;
+    background-color: #f8f9fa;
+    border: 1px solid #ced4da;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 8px;
+    margin-top: 7%; /* Sayfanın altına boşluk bırakmak için eklenmiştir */
+    position: -webkit-sticky;
+    position: relative;
+    top: 0;
+    z-index: 1;
+}
+
+.interim {
+    color: #999;
+}
+
+.final {
+    color: black;
+}

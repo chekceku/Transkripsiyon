@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="tr">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transkripsiyon</title>
+    <link rel="stylesheet" href="style/style.css"></head>
+    <link rel="icon" type="image/x-icon" href="img/transkripsiyon_icon.png">
+
+<body>
+    <main>
+
+        <div class="info" id="info">
+            <p id="info_start">Başlaya tıklayın ve istediğiniz kadar konuşun.</p>
+            <p id="info_speak_now" style="display:none;">Şimdi konuşun.</p>
+            <p id="info_no_speech" style="display:none;">Konuşma algılanmadı. Mikrofon ayarlarınızı <a href="https://support.google.com/chrome/bin/answer.py?hl=tr&amp;answer=1407892">ayarlayabilirsiniz</a>.</p>
+            <p id="info_no_microphone" style="display:none;">Mikrofon bulunamadı. Bir mikrofonun kurulu olduğundan ve <a href="https://support.google.com/chrome/bin/answer.py?hl=tr&amp;answer=1407892">mikrofon ayarlarının</a> doğru yapıldığından emin olun.</p>
+            <p id="info_allow" style="display:none;">Mikrofonunuzu etkinleştirmek için yukarıdaki "İzin Ver" düğmesine tıklayın.</p>
+            <p id="info_denied" style="display:none;">Mikrofon kullanma izni reddedildi.</p>
+            <p id="info_blocked " style="display:none;">Mikrofon kullanma izni engellendi. Değiştirmek için chrome://settings/contentExceptions#media-stream adresine gidin.</p>
+            <p id="info_upgrade" style="display:none;">Bu tarayıcı Web Speech API tarafından desteklenmiyor. <a href="https://www.google.com/chrome">Chrome</a> sürüm 25 veya üzerine güncelleyin.</p>
+            <p id="info_stop" style="display:none;">Konuşma durduruldu.</p>
+            <p id="info_cleared" style="display:none;">Temizlendi. Konuşmaya devam edebilirsiniz.</p>
+            <p id="info_copy" style="display:none;">Mesaj kopyalandı</p>
+        </div>
+
+        <div class="language-selection">
+            <select id="select_language" onchange="updateCountry()">
+                <option value="0">Afrikaans</option>
+                <option value="1">Bahasa Indonesia</option>
+                <option value="2">Bahasa Melayu</option>
+                <option value="3">Català</option>
+                <option value="4">Čeština</option>
+                <option value="5">Dansk</option>
+                <option value="6">Deutsch</option>
+                <option value="7">English</option>
+                <option value="8">Español</option>
+                <option value="9">Euskara</option>
+                <option value="10">Filipino</option>
+                <option value="11">Français</option>
+                <option value="12">Galego</option>
+                <option value="13">Hrvatski</option>
+                <option value="14">IsiZulu</option>
+                <option value="15">Íslenska</option>
+                <option value="16">Italiano</option>
+                <option value="17">Lietuvių</option>
+                <option value="18">Magyar</option>
+                <option value="19">Nederlands</option>
+                <option value="20">Norsk bokmål</option>
+                <option value="21">Polski</option>
+                <option value="22">Português</option>
+                <option value="23">Română</option>
+                <option value="24">Slovenščina</option>
+                <option value="25">Slovenčina</option>
+                <option value="26">Suomi</option>
+                <option value="27">Svenska</option>
+                <option value="28">Tiếng Việt</option>
+                <option value="29">Türkçe</option>
+                <option value="30">Ελληνικά</option>
+                <option value="31">български</option>
+                <option value="32">Pусский</option>
+                <option value="33">Српски</option>
+                <option value="34">Українська</option>
+                <option value="35">한국어</option>
+                <option value="36">中文</option>
+                <option value="37">日本語</option>
+                <option value="38">हिन्दी</option>
+                <option value="39">ภาษาไทย</option>
+            </select>&nbsp;&nbsp;
+            <select id="select_dialect" style="visibility: visible;"></select>
+        </div>
+
+        <div id="results" class="results-container">
+            <span class="placeholder" id="placeholder_span"><img width="40px" height="40px" 
+            src="img/yuklenicek.webp" alt="Placeholder GIF"></span>
+            <span class="final" id="final_span"></span>
+            <span class="interim" id="interim_span"></span>
+        </div>
+
+        <div class="button-container">
+            <center><div id="copy_feedback" style="display: none;"></div></center>
+            <a id="start_button" onclick="startButton(event)"><i class="fas fa-play"></i> Başla</a>
+            <a id="stop_button" onclick="stopButton()"><i class="fas fa-stop"></i> Durdur</a>
+            <a id="download_button" onclick="downloadTranscription()"><i class="fas fa-file-arrow-down"></i> İndir (.txt)</a>
+            <a id="copy_button" onclick="copyButton()"><i class="fas fa-copy"></i> Kopyala</a>
+            <a id="clear_button" onclick="clearTranscription()"><i class="fa-solid fa-broom"></i> Temizle</a>
+        </div>
+
+    </main>
+    <script src="script.js"></script>
+
+</body>
+</html>

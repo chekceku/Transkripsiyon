@@ -1,0 +1,26 @@
+.button-container a {
+    display: none;
+    background-color: #ecf0f1;
+    color: #34495e;
+    border: 1px solid #bdc3c7;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.button-container a:hover {
+    background-color: #a9cce3;
+    border: 1px solid #3498db;
+}
+
+.transcription-element {
+    display: none;
+}
+
+#start_button {
+    display: inline-block;
+}

@@ -1,0 +1,29 @@
+
+.language-selection {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 3;
+}
+
+#select_language,
+#select_dialect {
+    background-color: #ecf0f1;
+    color: #34495e;
+    border: 1px solid #bdc3c7;
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 6px;
+    width: 200px;
+    margin-right: 10px;
+}
+
+#select_language:hover,
+#select_dialect:hover {
+    border: 1px solid #3498db;
+}
+
+#select_language:focus,
+#select_dialect:focus {
+    outline: none;
+}
